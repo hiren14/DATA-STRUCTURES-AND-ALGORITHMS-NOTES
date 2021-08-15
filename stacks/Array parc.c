@@ -21,7 +21,8 @@ void push ()
       //  printf("enter the new element");
        // scanf("%d",new);
         //array declaration
-        // printf ("ENTER A VALUE : ");
+else{
+        printf ("ENTER A VALUE : ");
           scanf ("%d", &x);
         /* at first */
       //error  
@@ -30,7 +31,7 @@ void push ()
             stack[i]=stack[i-1];
         }
         stack[0]=x;
-        top++;
+        top++;}
         break;
     }
   
@@ -45,7 +46,8 @@ case 3:
         {
             printf ("\nOverflow\n");
         }
-        printf("Enter the position ");
+     else{
+   printf("Enter the position ");
         scanf("%d",&pos);
         printf("enter the new element");
         scanf("%d",&new);
@@ -59,6 +61,7 @@ case 3:
 
         }
         stack[pos]=new;
+}
         break;
     }
     // at last
@@ -94,11 +97,11 @@ void pop ()
     }
     //at last
    else
- printf("\n1. for specific positions\n 2. for last position\n");
+printf("\n 1. for beginning \n2. for specific positions\n 3. for last position\n");
     scanf("%d",&choice);
 
     switch(choice) {
-    case 1:
+    case 2:
         printf("Enter the position ");
         scanf("%d",&pos);
         for(int i=pos; i<=n; i++)
@@ -109,14 +112,26 @@ void pop ()
         top--;
         display();
         break;
-    case 2:
+    case 3:
 
         item = stack[top];
         top--;
         printf ("\n%d\n", item);
         break;
-    }
-} //
+    }case 1:
+ {
+    //printf("Enter the position ");
+       // scanf("%d",&pos);
+    pos=0;
+        for(int i=pos; i<=n; i++)
+        {
+            stack[i]=stack[i+1];
+        }
+        top--;
+        break;
+        
+}}}
+//
 void topp ()
 {   if (top == -1)
     {
