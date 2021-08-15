@@ -135,7 +135,7 @@ printf("\n 1. for beginning \n2. for specific positions\n 3. for last position\n
         top--;
         break;
         
-}}}
+}}}}
 //
 void topp ()
 {   if (top == -1)
