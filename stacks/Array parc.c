@@ -7,9 +7,12 @@ void push ()
 /*Add a seach mini and max and search in code */
 {
 
-    int x,pos,new,choice;
+    int x,pos,new,choice;printf("\n/********************************\n");
+    
     printf("\n1. At beginning position \n 2. for last position\n 3. for specific positions");
-    scanf("%d",&choice);
+    printf("\n/********************************\n");
+    
+scanf("%d",&choice);
     switch(choice)
     {
     case 1:
@@ -96,7 +99,9 @@ void pop ()
         printf ("\nunderflow\n");
     }
     //at last
-   else
+   else{
+printf("\n/********************************\n");
+    
 printf("\n 1. for beginning \n2. for specific positions\n 3. for last position\n");
     scanf("%d",&choice);
 
@@ -137,15 +142,19 @@ void topp ()
     {
         printf ("\nempty\n");
     }
-    else {
+    else {printf("\n/********************************\n");
+    
         printf ("\n%d", stack[top]);
-    }
+   printf("\n/********************************\n");
+     }
 }
 void display ()
-{   for (int i = 0; i<=top; i++)
+{  printf("\n/********************************\n");
+     for (int i = 0; i<=top; i++)
     {
         printf ("\nArray[%d] :%d\n", i, stack[i]);
-    }
+    }printf("\n/********************************\n");
+    
 }
 /*void update()                  {
 int num,val;                  //get top
@@ -177,16 +186,21 @@ void update()
     display();
 }
 void search ()
-{
+{printf("\n/********************************\n");
+    
     int key;
     printf ("\nenter the elements to be search\n");
-    scanf ("%d", &key);
+    scanf ("%d", &key);printf("\n/********************************\n");
+    
     for (int i = 0; i < top; i++)
-    {   if (stack[i] == key)
+    {   if (stack[i] == key){
+printf("\n/********************************\n");
+    
             printf ("\nthe position is %d and values %d", i, key);
-
+}
         else// (stack[i] != key)
-        {
+        {printf("\n/********************************\n");
+    
             printf ("not elements found %d", key);
         }
     }
@@ -202,55 +216,86 @@ void max_min ()
 
             mini=stack[i];
 
-    }
+    }printf("\n/********************************\n");
+    
     printf("\nmax value  in array is %d\n",max);
     printf("\nminimum  value  in array  is %d\n",mini);
+printf("\n/********************************\n");
+    
 }
 
 void reverse()
-{   for (int i = top; i >= 0; i--)
+{  printf("\n/********************************\n");
+     for (int i = top; i >= 0; i--)
     {
         printf ("\nArray[%d] :%d\n", i, stack[i]);
-    }
+    }printf("\n/********************************\n");
+    
 }
 int main ()
 {   int ch;
-    do {
+    do {printf("\n/********************************\n");
+    
         printf ("Enter choice\n1.PUSH \n 2.POP \n 3 TOP \n 4.DISPLAY \n5. SEARCH \n 6.max and mininvalue \n 7. Reverse\n");
         //printf ("Enter choice\n1.push \n 2.pop\n 3 top\n 4.display\n");
         scanf ("%d", &ch);
         switch (ch)     {
-        case 1:
+        case 1:{printf("\n/********************************\n");
+    
             push ();
-            break;
-        case 2:
+printf("\n/********************************\n");
+    
+            break;}
+        case 2:{
+printf("\n/********************************\n");
+    
             pop ();
-
-            break;
-        case 3:
-            topp ();
-            break;
-        case 4:
+printf("\n/********************************\n");
+    
+            break;}
+        case 3:{printf("\n/********************************\n");
+    
+            topp ();printf("\n/********************************\n");
+    
+            break;}
+        case 4:{
+printf("\n/********************************\n");
+    
             display ();
+printf("\n/********************************\n");
+    
             break;
-
-        case 5:
+}
+        case 5:{printf("\n/********************************\n");
+    
             search ();
-
-            break;
-        case 6:
+printf("\n/********************************\n");
+    
+            break;}
+        case 6:{printf("\n/********************************\n");
+    
             max_min ();
-            break;
-        case 7:
+    printf("\n/********************************\n");
+    
+            break;}
+        case 7:{printf("\n/********************************\n");
+    
             reverse();
-            break;
-        case 8:
+printf("\n/********************************\n");
+    
+            break;}
+        case 8:printf("\n/********************************\n");
+    
             update();
+printf("\n/********************************\n");
+    
             break;
         case 9:
             break;
-        default:
-            printf ("Enter a valid choice");
+        default:{
+printf("\n/********************************\n");
+    
+            printf ("Enter a valid choice");}
         }
     }
     while (ch != 9);             //printf("Hello world!");
