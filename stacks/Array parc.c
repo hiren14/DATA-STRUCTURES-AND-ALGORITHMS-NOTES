@@ -48,12 +48,12 @@ case 3:
         printf("Enter the position ");
         scanf("%d",&pos);
         printf("enter the new element");
-        scanf("%d",new);
+        scanf("%d",&new);
         //array declaration
         // printf ("ENTER A VALUE : ");
         //   scanf ("%d", &x);
         /* at first */
-        for(int i=n; i>0; i--)
+        for(int i=n; i>pos; i--)
         {
             stack[i+1]=stack[i];
 
