@@ -11,6 +11,8 @@ void main()
 {
 	int array[MAXSIZE];
 	int i, j, num, temp;
+FILE *file1;  
+   FILE *file2; 
 
 	printf("Enter the value of num \n");
 	scanf("%d", &num);
@@ -18,12 +20,23 @@ void main()
 	printf("Before sorting the elements are \n");
 	for (i = 0; i < num; i++)
 	{
-		array[i]=rand()%100;
+		array[i]=rand()%100;/*initialize the random 
+function under 100 num*/
 	}
 for (i = 0; i < num; i++)
 	{
 printf(" element %d is : %d\n",i,array[i]);		
 	}
+/*file handling */
+file1=fopen("UNSORTED.txt","w");   /* use of fopen ehich open 
+files and name is unsorted.txt and w =write if r is read */
+  fprintf(file1,"\n Unsorted element number\n"); 
+for (i = 0; i < num; i++)
+	{
+fprintf(file1,"%d\n",*(prt+i)); 
+//printf(" element %d is : %d\n",i,ptr[i]);		
+	}
+
 
    /*   Bubble sorting begins */
 	for (i = 0; i < num; i++)
@@ -44,6 +57,16 @@ printf(" element %d is : %d\n",i,array[i]);
 	{
 		printf("element %d is :%d\n",i, array[i]);
 	}
+
+file2=fopen("SORTED.txt","w");   //opens the file 
+  fprintf(file2,"\n sorted element number\n");     //fprint the elements   
+   for ( i = 1; i < a+1; i++) 
+    {        
+ fprintf(file2,"%d\n",*(prt+i)); /*fprint is used to 
+Printing the file and output in file */ 
+    }         
+ fclose(file1);   //close the file 
+  fclose(file2);  //close the file 
 	
 }
 
