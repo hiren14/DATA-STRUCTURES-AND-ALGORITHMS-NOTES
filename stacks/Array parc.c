@@ -8,7 +8,7 @@ void push ()
 {
 
     int x,pos,new,choice;
-    printf("\n1. for specific positions\n 2. for last position\n");
+    printf("\n1. At beginning position \n 2. for last position\n 3. for specific positions");
     scanf("%d",&choice);
     switch(choice)
     {
