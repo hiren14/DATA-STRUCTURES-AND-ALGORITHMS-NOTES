@@ -18,22 +18,22 @@ void push ()
         {
             printf ("\nOverflow\n");
         }
-        printf("enter the new element");
-        scanf("%d",new);
+      //  printf("enter the new element");
+       // scanf("%d",new);
         //array declaration
         // printf ("ENTER A VALUE : ");
-        //   scanf ("%d", &x);
+          scanf ("%d", &x);
         /* at first */
       //error  
-    for(int i=0; i>n; i++)
+       for(int i=n; i>=0; i--)
         {
-            stack[i+1]=stack[i];
-
+            stack[i]=stack[i-1];
         }
-        stack[0]=new;
+        stack[0]=x;
+        top++;
         break;
     }
-
+  
 case 3:
     {
         /* if (top == -1)
