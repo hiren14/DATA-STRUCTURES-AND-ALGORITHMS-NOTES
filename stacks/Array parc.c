@@ -118,7 +118,7 @@ printf("\n 1. for beginning \n2. for specific positions\n 3. for last position\n
         top--;
         printf ("\n%d\n", item);
         break;
-    }case 1:
+    case 1:
  {
     //printf("Enter the position ");
        // scanf("%d",&pos);
