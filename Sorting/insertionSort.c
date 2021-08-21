@@ -89,10 +89,7 @@ int main()
 
     }
   printf("AFTER sorting the elements are \n");
-    for (i = 0; i < num; i++)
-    {
-        ptr[i]=rand()%100;
-    }
+ 
     for (i = 0; i < num; i++)
     {
         printf(" element %d is : %d\n",i,ptr[i]);
